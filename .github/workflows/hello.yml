@@ -1,0 +1,21 @@
+name: Hello World Test
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a message
+        run: echo "GitHub Actions is working!"
+
+      - name: Check Docker exists
+        run: docker --version
+
+      - name: Show current date on the runner
+        run: date
+
+      - name: List files in this repo
+        run: ls -la
